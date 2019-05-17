@@ -44,7 +44,10 @@ class ClientThread(Thread):
             print("Unfortunately, the server does not have the necessary files for client. Goodbye!\n")
         # Если файлы найдены
         else:
-            print(f"Found files: '{files}'\n")
+            print(f"\nFound files on server: ")
+            for file in files:
+                print(file)
+            print()
             # Если файлы в директории, определенной клиентом найдены
             if files:
                 # Для имени каждого найденного файла в списке с именами найденных файлами

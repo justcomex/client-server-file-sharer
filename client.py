@@ -53,7 +53,10 @@ def main():
     if not files:
         print("\nUnfortunately, the server does not have the necessary files. Try again later!\n")
     else:
-        print(f"\nFound files on server: '{files}'\n")
+        print(f"\nFound files on server: ")
+        for file in files:
+            print(file)
+        print()
         # Создадим директорию 'downloads', если ее нет в папке со скриптом клиента
         if not os.path.exists('downloads'):
             os.makedirs('downloads')
